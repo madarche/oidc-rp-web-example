@@ -1,0 +1,33 @@
+
+[common]
+base_url = "https://oidc-rp-web-demo.local.test"
+secret = "CHANGE_ME"
+
+[log]
+level = "error"
+#level = "trace"
+# If not defined the logger outputs to the console (useful when developing or debugging)
+#file_path = "oidc-rp-web-demo.log"
+#file_path = "/tmp/oidc-rp-web-demo.log"
+
+[server]
+#ip = "127.0.0.1"
+#ip = "0.0.0.0"
+#port = 8012
+
+[oidc]
+issuer_url = 'https://connect.local.test/'
+client_id = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+client_secret = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+scope = 'openid'
+#scope = 'openid email'
+#scope = 'openid email profile'
+
+[resources]
+# External resources to load from an OAuth2 Resource Server
+#url = 'https://api.local.test/resources'
+
+
+
+# vim: ai:ts=2:sw=2:ft=conf
+# vim: set expandtab:
