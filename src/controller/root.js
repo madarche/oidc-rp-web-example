@@ -42,7 +42,7 @@ async function renderPage(req, res, next) {
                 if (resources_url) {
                     logger.trace('Requesting resources from Resource Server at:', resources_url)
                     const resp = await client.requestResource(resources_url, token_set)
-                    logger.trace('Response from Resource Server:', resp.body.toString())
+                    logger.trace('Response from Resource Server:', resp.headers, resp.body.toString())
                 } else {
                     logger.trace('No resources_url not defined, so not fetching')
                 }

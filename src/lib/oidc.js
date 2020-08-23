@@ -1,14 +1,18 @@
 'use strict'
 
+const QuickLRU = require('quick-lru')
 const {custom, Issuer, generators, TokenSet} = require('openid-client')
 
 const config = require('./config')
 const logger = require('./logger')
 
+const cache = new QuickLRU({maxSize: 100})
+
 custom.setHttpOptionsDefaults({
     // For requestResource: Making erros be thrown for non-2xx status codes
     // responses.
     throwHttpErrors: true,
+    cache,
 })
 
 const issuer_url = config.get('oidc.issuer_url')
