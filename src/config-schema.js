@@ -5,7 +5,7 @@ module.exports = {
         base_url: {
             doc: 'Application base URL',
             format: 'url',
-            default: 'https://oidc-rp-web-demo.local.test'
+            default: 'https://oidc-rp-web-example.local.test'
         },
         secret: {
             doc: 'Secret used for session cookies and CSRF tokens',
@@ -54,7 +54,7 @@ module.exports = {
         cookie_name: {
             doc: 'Name of this application cookie',
             format: '*',
-            default: 'app.oidc-rp-web-demo'
+            default: 'app.oidc-rp-web-example'
         }
     },
     oidc: {

@@ -1,7 +1,7 @@
 {
-  "name": "oidc-rp-web-demo",
+  "name": "oidc-rp-web-example",
   "version": "1.0.0",
-  "description": "OpenID Connect Relying Party (RP) web demo",
+  "description": "OpenID Connect Relying Party (RP) web example",
   "author": "Marc-Aurèle DARCHE",
   "license": "MIT",
   "engines": {

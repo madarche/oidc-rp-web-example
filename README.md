@@ -1,16 +1,16 @@
-oidc-rp-web-demo
-================
+oidc-rp-web-example
+===================
 
-[![Build Status](https://travis-ci.org/madarche/oidc-rp-web-demo.svg?branch=master)](https://travis-ci.org/madarche/oidc-rp-web-demo)
+[![Build Status](https://travis-ci.org/madarche/oidc-rp-web-example.svg?branch=master)](https://travis-ci.org/madarche/oidc-rp-web-example)
 
-OpenID Connect Relying Party (RP) *web client* (like a web site) demo
+OpenID Connect Relying Party (RP) *web client* (like a web site) example
 
 
 Usage
 -----
 
 It is assumed that this application will run as
-https://oidc-rp-web-demo.local.test/. One can change this URL with whatever
+https://oidc-rp-web-example.local.test/. One can change this URL with whatever
 other URL
 
 First, write the `config.tom` config file:
@@ -23,8 +23,8 @@ vim config.toml
 Next, register the RP in the OP with the following properties:
 
 * `client_id` : the same as the `client_id` set in the `config.toml`
-* `redirect_uris` : `https://oidc-rp-web-demo.local.test/logged_in`
-* `post_logout_redirect_uris` : `https://oidc-rp-web-demo.local.test/logged_out`
+* `redirect_uris` : `https://oidc-rp-web-example.local.test/logged_in`
+* `post_logout_redirect_uris` : `https://oidc-rp-web-example.local.test/logged_out`
 * `application_type` : `web`
 * `token_endpoint_auth_method` : `client_secret_basic`
 * `client_secret` : the same as the `client_secret` set in `config.toml`
@@ -36,7 +36,7 @@ npm ci
 npm start
 ```
 
-Finally, visit the application at https://oidc-rp-web-demo.local.test/
+Finally, visit the application at https://oidc-rp-web-example.local.test/
 
 
 ### When the OP uses self-signed certificate
