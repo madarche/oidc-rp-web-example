@@ -6,12 +6,21 @@ oidc-rp-web-example
 OpenID Connect Relying Party (RP) *web client* (like a web site) example
 
 
+Architecture
+------------
+
+This example needs an OIDC Server (OP) and optionnaly an OAuth2 Resource Server
+(https://github.com/madarche/oauth2-resource-server-example).
+
+![Architecture schema](architecture.png "Architecture schema")
+
+
 Usage
 -----
 
 It is assumed that this application will run as
 https://oidc-rp-web-example.local.test/. One can change this URL with whatever
-other URL
+other URL.
 
 First, write the `config.tom` config file:
 
