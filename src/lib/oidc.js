@@ -56,7 +56,7 @@ async function getClient(req) {
                 client_secret,
             })
         } catch (err) {
-            logger.error('OP cannot be reached. Check issuer_url and OP availability.')
+            logger.debug('OP cannot be reached. Check issuer_url and OP availability.')
             throw err
         }
     }
