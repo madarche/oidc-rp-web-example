@@ -9,7 +9,7 @@ OpenID Connect Relying Party (RP) *web client* (like a web site) example
 Architecture
 ------------
 
-This example needs an OIDC Server (OP) and optionnaly an OAuth2 Resource Server
+This example needs an OIDC Server (OP) and optionally an OAuth2 Resource Server
 (https://github.com/madarche/oauth2-resource-server-example).
 
 ![Architecture schema](architecture.png "Architecture schema")
@@ -24,7 +24,7 @@ other URL.
 
 First, write the `config.tom` config file.
 
-Optionally set the `resources.url` propriety with the URL of the OAuth2 Resource Server route.
+Optionally set the `resources.url` property with the URL of the OAuth2 Resource Server route.
 
 ```shellsession
 cp config.toml.example config.toml
