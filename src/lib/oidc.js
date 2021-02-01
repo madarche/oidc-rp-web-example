@@ -15,6 +15,7 @@ custom.setHttpOptionsDefaults({
     cache,
 })
 
+const mask_sensitive_values = config.get('common.mask_sensitive_values')
 const issuer_url = config.get('oidc.issuer_url')
 const client_id = config.get('oidc.client_id')
 const client_secret = config.get('oidc.client_secret')
@@ -30,8 +31,8 @@ let openid_client
 function getConfigInfo() {
     return {
         issuer_url,
-        client_id,
-        client_secret,
+        ...!mask_sensitive_values && {client_id},
+        ...!mask_sensitive_values && {client_secret},
         scope,
         response_types,
         token_endpoint_auth_method,
