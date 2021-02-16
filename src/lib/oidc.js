@@ -9,9 +9,6 @@ const logger = require('./logger')
 const cache = new QuickLRU({maxSize: 100})
 
 custom.setHttpOptionsDefaults({
-    // For requestResource: Making erros be thrown for non-2xx status codes
-    // responses.
-    throwHttpErrors: true,
     cache,
 })
 
