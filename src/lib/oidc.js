@@ -114,7 +114,20 @@ class WrappedClient {
     }
 
     async userinfo() {
-        const resp = await openid_client.userinfo(this.getTokenSet())
+        const resp = await openid_client.userinfo(this.getTokenSet(), {
+            params: {
+                claims: JSON.stringify({
+                    userinfo: {
+                        given_name: {essential: true},
+                        family_name: {essential: true},
+                    },
+                    id_token: {
+                        given_name: {essential: true},
+                        family_name: {essential: true},
+                    },
+                }),
+            },
+        })
         return resp
     }
 
